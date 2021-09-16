@@ -834,7 +834,7 @@ const skcnv = {
     mob: 9,
 };
 const levelers = [
-    1,  2,  3,  4,  5,  6,  7,  8,  9,  10,
+    1, 1, 1, 1, 1, 1, 1, 1,  2,  3,  4,  5,  6,  7,  8,  9,  10,
     11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
     21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
     31, 32, 33, 34, 35, 36, 38, 40, 42, 44,
@@ -848,15 +848,15 @@ class Skill {
             c.MAX_SKILL, c.MAX_SKILL, c.MAX_SKILL, c.MAX_SKILL, c.MAX_SKILL
         ]);
         this.name = [
-            'Reload',
-            'Bullet Penetration',
-            'Bullet Health',
+            'Fire Rate',
+            'Bullet Pen',
+            'Bullet Hp',
             'Bullet Damage',
             'Bullet Speed',
             'Shield Capacity',
             'Body Damage',
             'Max Health',
-            'Shield Regeneration',
+            'Shield Regen',
             'Movement Speed',
         ];
         this.atk = 0;
@@ -4637,13 +4637,13 @@ var maintainloop = (() => {
             spawnBosses(census);
                 if (bots.length < c.BOTS) {
                     let o = new Entity(room.random());
-                    o.color = 1;
+                    o.color = 14;
                     o.define(Class.bot);
-                    o.define(Class.sniper); 
-                    o.define(Class.o);
+                    o.define(Class.sniper) 
+                    o.define(Class.twin)
                     o.name += ran.chooseBotName();
                     o.refreshBodyAttributes();
-                    o.color = 1;
+                    o.color = 14;
                     bots.push(o);
                 }
                 // Remove dead ones
