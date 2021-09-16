@@ -5693,10 +5693,10 @@ var maintainloop = (() => {
       spawnCrasher(census);
       spawnBosses(census);
       if (bots.length < c.BOTS) {
-        let o = new Entity(room.base());
-        o.color = 10;
-        o.team = -;
-        o.define(Class.baseProtector);
+        let o = new Entity(room.random());
+        o.color = [10, 11, 12, 13, 15;
+        o.team = -100;
+        o.define(Class.bot);
         o.define(Class.twin);
         o.name += ran.chooseBotName();
         o.refreshBodyAttributes();
