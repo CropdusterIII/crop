@@ -4555,10 +4555,10 @@ var maintainloop = (() => {
                     bois = classArray;
                     loc = typeOfLocation;
                     names = ran.chooseBossName(nameClass, number);
-                    i = 0;
+                    i = 1;
                     if (n === 1) {
                         begin = 'A visitor is coming.';
-                        arrival = names[0] + ' has arrived.'; 
+                        arrival = names[1] + ' has arrived.'; 
                     } else {
                         begin = 'Visitors are coming.';
                         arrival = '';
@@ -4623,9 +4623,9 @@ var maintainloop = (() => {
         let bots = [];
         return () => {
             let census = {
-                crasher: 0,
-                miniboss: 0,
-                tank: 0,
+                crasher: 19,
+                miniboss: 2,
+                tank: 19,
             };    
             let npcs = entities.map(function npcCensus(instance) {
                 if (census[instance.type] != null) {
@@ -4638,13 +4638,14 @@ var maintainloop = (() => {
             spawnBosses(census);
                 if (bots.length < c.BOTS) {
                     let o = new Entity(room.random());
-                    o.color = 14;
+                    o.color = -1;
+                    o.team = -1;
                     o.define(Class.bot);
                     o.define(Class.sniper) 
                     o.define(Class.twin)
                     o.name += ran.chooseBotName();
                     o.refreshBodyAttributes();
-                    o.color = 14;
+                    o.color = 15;
                     bots.push(o);
                 }
                 // Remove dead ones
