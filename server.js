@@ -5663,11 +5663,13 @@ var maintainloop = (() => {
   let makenpcs = (() => {
     /*let f = (loc, team) => {
                 let o = new Entity(loc);
-                    //o.define(Class.baseProtector);
-                    //o.team = -team;
-                    //o.color = [10, 11, 12, 15][team-1];
+                    o.define(Class.baseProtector);
+                    o.team = -team;
+                    o.color = [10, 11, 12, 15][team-1];
              };
-             for let i=1; i<5; 
+             for (let i=1; i<5; i++) {
+                 room['bas' + i].foreach((loc)
+            }*/
     
     // Return the spawning function
     let bots = [];
@@ -5691,10 +5693,10 @@ var maintainloop = (() => {
       spawnCrasher(census);
       spawnBosses(census);
       if (bots.length < c.BOTS) {
-        let o = new Entity(room.random());
+        let o = new Entity(room.base());
         o.color = 10;
-        o.team = -100;
-        o.define(Class.bot);
+        o.team = -;
+        o.define(Class.baseProtector);
         o.define(Class.twin);
         o.name += ran.chooseBotName();
         o.refreshBodyAttributes();
