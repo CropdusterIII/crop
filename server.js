@@ -3196,12 +3196,10 @@ var http = require("http"),
         let xy3 = x3 * x3 + y3 * y3;
         let x =
           // Numerator
-          (xy1 * (y2 - y3) + xy2 * (y3 - y1) + xy3 * (y1 - y2)) /
-          (2 * denom);
+          (xy1 * (y2 - y3) + xy2 * (y3 - y1) + xy3 * (y1 - y2)) / (2 * denom);
         let y =
           // Numerator
-          (xy1 * (x3 - x2) + xy2 * (x1 - x3) + xy3 * (x2 - x1)) /
-          (2 * denom);
+          (xy1 * (x3 - x2) + xy2 * (x1 - x3) + xy3 * (x2 - x1)) / (2 * denom);
         let r = Math.sqrt(Math.pow(x - x1, 2) + Math.pow(y - y1, 2));
         let r2 = Math.sqrt(Math.pow(x - x2, 2) + Math.pow(y - y2, 2));
         let r3 = Math.sqrt(Math.pow(x - x3, 2) + Math.pow(y - y3, 2));
@@ -5670,7 +5668,7 @@ var maintainloop = (() => {
              for (let i=1; i<5; i++) {
                  room['bas' + i].foreach((loc)
             }*/
-    
+
     // Return the spawning function
     let bots = [];
     return () => {
@@ -5694,8 +5692,8 @@ var maintainloop = (() => {
       spawnBosses(census);
       if (bots.length < c.BOTS) {
         let o = new Entity(room.random());
-        o.color = [10, 11, 12, 13, 15;
-        o.team = -100;
+        o.color = [10, 11, 12, 15];
+
         o.define(Class.bot);
         o.define(Class.twin);
         o.name += ran.chooseBotName();
