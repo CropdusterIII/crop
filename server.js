@@ -5693,7 +5693,7 @@ var maintainloop = (() => {
       if (bots.length < c.BOTS) {
         let o = new Entity(room.random());
         o.color = [10, 11, 12, 15];
-
+        o.color = [1, 2, 3, 4, 10];
         o.define(Class.bot);
         o.define(Class.twin);
         o.name += ran.chooseBotName();
