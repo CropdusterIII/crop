@@ -5661,16 +5661,14 @@ var maintainloop = (() => {
   };
   // The NPC function
   let makenpcs = (() => {
-    
-    /*let f = (loc, team) => 
-                let o = new Entity(loc);
-                    o.define(Class.baseProtector);
-                    o.team = -team;
-                    o.color = [10, 11, 12, 15][team-1];
-            
-            for (let i=1; i<5; i++) 
-                room['bas' + i].forEach((loc) => { f(loc, i); }); 
-            
+    //let f = (loc, team) => { 
+                //*let o = new Entity(loc);
+                    //o.define(Class.baseProtector);
+                    //o.team = -team;
+                    //o.color = [10, 11, 12, 15][team-1];
+            },
+             //for (let i=1; i<5; i++) 
+                //room['bas' + i].forEach((loc) => { f(loc, i); }); 
     // Return the spawning function
     let bots = [];
     return () => {
