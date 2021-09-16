@@ -5661,16 +5661,16 @@ var maintainloop = (() => {
   };
   // The NPC function
   let makenpcs = (() => {
-    // Make base protectors if needed.
-    /*let f = (loc, team) => { 
+    
+    /*let f = (loc, team) => 
                 let o = new Entity(loc);
                     o.define(Class.baseProtector);
                     o.team = -team;
                     o.color = [10, 11, 12, 15][team-1];
-            };
-            for (let i=1; i<5; i++) {
+            
+            for (let i=1; i<5; i++) 
                 room['bas' + i].forEach((loc) => { f(loc, i); }); 
-            }*/
+            
     // Return the spawning function
     let bots = [];
     return () => {
@@ -5695,18 +5695,11 @@ var maintainloop = (() => {
       if (bots.length < c.BOTS) {
         let o = new Entity(room.random());
         o.color = 10;
-        o.color = 11;
-        o.color = 12;
-        o.color 
-        o.team = 10;
-        o.team = 11;
-        o.team = 12;
-        o.team = 15;
+        o.team = -100;
         o.define(Class.bot);
         o.define(Class.twin);
         o.name += ran.chooseBotName();
         o.refreshBodyAttributes();
-
         bots.push(o);
       }
       // Remove dead ones
