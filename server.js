@@ -4638,7 +4638,7 @@ var maintainloop = (() => {
             spawnBosses(census);
                 if (bots.length < c.BOTS) {
                     let o = new Entity(room.random());
-                    o.color = -1;
+                    o.color = 10;
                     o.team = -1; 
                     o.team = -2; 
                     o.team = -3; 
@@ -4648,7 +4648,7 @@ var maintainloop = (() => {
                     o.define(Class.twin)
                     o.name += ran.chooseBotName();
                     o.refreshBodyAttributes();
-                    o.color = -1;
+                    o.color = 12;
                     bots.push(o);
                 }
                 // Remove dead ones
