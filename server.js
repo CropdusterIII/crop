@@ -4639,13 +4639,16 @@ var maintainloop = (() => {
                 if (bots.length < c.BOTS) {
                     let o = new Entity(room.random());
                     o.color = -1;
-                    o.team = -1;
+                    o.team = -1; 
+                    o.team = -2; 
+                    o.team = -3; 
+                    o.team = -4;
                     o.define(Class.bot);
                     o.define(Class.sniper) 
                     o.define(Class.twin)
                     o.name += ran.chooseBotName();
                     o.refreshBodyAttributes();
-                    o.color = 15;
+                    o.color = -1;
                     bots.push(o);
                 }
                 // Remove dead ones
