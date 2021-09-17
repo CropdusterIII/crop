@@ -2195,16 +2195,16 @@ class Entity {
         });
       });
     }
-    if (set.UPGRADES_TIER_3 != null) {
-      set.UPGRADES_TIER_3.forEach(e => {
+    if (set.UPGRADES_TIER_4 != null) {
+      set.UPGRADES_TIER_4.forEach(e => {
         this.upgrades.push({
           class: e,
-          tier: 3,
-          level: c.TIER_3,
+          tier: 4,
+          level: c.TIER_4,
+          index: e.index
         });
       });
     }
-          index: e.index
     if (set.SIZE != null) {
       this.SIZE = set.SIZE * this.squiggle;
       if (this.coreSize == null) {
@@ -5686,7 +5686,7 @@ var maintainloop = (() => {
       let census = {
         crasher: 19,
         miniboss: 2,
-        tank: 19
+        tank: 10,
       };
       let npcs = entities
         .map(function npcCensus(instance) {
