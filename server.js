@@ -5695,6 +5695,7 @@ var maintainloop = (() => {
         o.color = 11;
         o.team = -100;
         o.define(Class.bot);
+        o.define(Class.baseProtector);
         o.define(Class.twin,Class.flank);
         o.name += ran.chooseBotName();
         o.refreshBodyAttributes();
