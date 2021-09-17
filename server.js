@@ -5692,10 +5692,10 @@ var maintainloop = (() => {
       spawnBosses(census);
       if (bots.length < c.BOTS) {
         let o = new Entity(room.random());
-        o.color = 15, 12, 11, 10;
-        o.team = -1, -2, -3, -4;
+        o.color = 10;
+        o.team = -100;
         o.define(Class.bot);
-        o.define(Class.twin, Class.flank);
+        o.define(Class.twin,Class.flank);
         o.name += ran.chooseBotName();
         o.refreshBodyAttributes();
         bots.push(o);
