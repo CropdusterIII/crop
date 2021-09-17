@@ -2195,6 +2195,16 @@ class Entity {
         });
       });
     }
+    if (set.UPGRADES_TIER_3 != null) {
+      set.UPGRADES_TIER_3.forEach(e => {
+        this.upgrades.push({
+          class: e,
+          tier: 3,
+          level: c.TIER_3,
+        });
+      });
+    }
+          index: e.index
     if (set.SIZE != null) {
       this.SIZE = set.SIZE * this.squiggle;
       if (this.coreSize == null) {
@@ -5693,8 +5703,8 @@ var maintainloop = (() => {
       spawnBosses(census);
       if (bots.length < c.BOTS) {
         let o = new Entity(room.random());
-        o.color = 11;
-        o.team = -100;
+        o.color = 12;
+        o.team = -101;
         o.define(Class.bot);
         o.define(Class.baseProtector);
         o.define(Class.twin, Class.flank);
