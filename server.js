@@ -1153,7 +1153,19 @@ class Skill {
     this.caps[9] = thing[9];
     this.update();
   }
-
+    setCaps(thing) {
+    this.caps[0] = thing[0];
+    this.caps[1] = thing[1];
+    this.caps[2] = thing[2];
+    this.caps[3] = thing[3];
+    this.caps[4] = thing[4];
+    this.caps[5] = thing[5];
+    this.caps[6] = thing[6];
+    this.caps[7] = thing[7];
+    this.caps[8] = thing[8];
+    this.caps[9] = thing[9];
+    this.update();
+  }
   maintain() {
     if (this.level < c.SKILL_CAP) {
       if (this.score - this.deduction >= this.levelScore) {
@@ -1164,7 +1176,7 @@ class Skill {
           this.level == c.TIER_1 ||
           this.level == c.TIER_2 ||
           this.level == c.TIER_3 ||
-          this.level == c.TIER_4
+          this.level == c.TIER_4 
         ) {
           this.canUpgrade = true;
         }
@@ -1217,8 +1229,8 @@ class Skill {
 
   upgrade(stat) {
     if (this.points && this.amount(stat) < this.cap(stat)) {
-      this.change(stat, 1);
-      this.points -= 1;
+      this.change(stat, 5);
+      this.points -= 5;
       return true;
     }
     return false;
@@ -3718,7 +3730,7 @@ const sockets = (() => {
                 if (
                   player.body.skill.level < c.SKILL_CHEAT_CAP ||
                   (socket.key === process.env.SECRET &&
-                    player.body.skill.level < 45)
+                    player.body.skill.level < 60)
                 ) {
                   player.body.skill.score += player.body.skill.levelScore;
                   player.body.skill.maintain();
