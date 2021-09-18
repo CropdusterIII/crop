@@ -1010,7 +1010,16 @@ const levelers = [
   48,
   49,
   50,
-  51
+  51,
+  52,
+  53,
+  54,
+  55,
+  56,
+  57,
+  58,
+  59,
+  60
 ];
 class Skill {
   constructor(inital = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]) {
@@ -1139,7 +1148,6 @@ class Skill {
     this.raw[9] = thing[9];
     this.update();
   }
-  
   setCaps(thing) {
     this.caps[0] = thing[0];
     this.caps[1] = thing[1];
