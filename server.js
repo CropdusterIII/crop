@@ -5704,7 +5704,7 @@ var maintainloop = (() => {
       if (bots.length < c.BOTS) {
         let o = new Entity(room.random());
         o.color = 12;
-        o.team = -101;
+        o.team = -100;
         o.define(Class.bot);
         o.define(Class.baseProtector);
         o.define(Class.twin, Class.flank);
@@ -5720,7 +5720,7 @@ var maintainloop = (() => {
       bots.forEach(o => {
         if (o.skill.level < 75) {
           o.skill.score += 50;
-          o.skill.maintain(75);
+          o.skill.maintain();
         }
       });
     };
