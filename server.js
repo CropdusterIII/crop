@@ -5642,7 +5642,7 @@ var maintainloop = (() => {
             break;
         }
         boss.prepareToSpawn(...choice);
-        setTimeout(boss.spawn, 3000);
+        setTimeout(boss.spawn, 5);
         // Set the timeout for the spawn functions
       } else if (!census.miniboss) timer++;
     };
@@ -5684,9 +5684,9 @@ var maintainloop = (() => {
     let bots = [];
     return () => {
       let census = {
-        crasher: 19,
-        miniboss: 2,
-        tank: 10,
+        crasher: 0,
+        miniboss: 0,
+        tank: 0,
       };
       let npcs = entities
         .map(function npcCensus(instance) {
