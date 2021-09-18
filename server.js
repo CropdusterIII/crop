@@ -1075,7 +1075,7 @@ class Skill {
         return Math.log(4 * x + 1) / Math.log(5);
       }
       let a = [];
-      for (let i = 0; i < c.MAX_SKILL * 1; i++) {
+      for (let i = 0; i < c.MAX_SKILL * 2; i++) {
         a.push(make(i / c.MAX_SKILL));
       }
       // The actual lookup function
@@ -1153,7 +1153,7 @@ class Skill {
     this.caps[9] = thing[9];
     this.update()
   }
-   }
+  
   maintain() {
     if (this.level < c.SKILL_CAP) {
       if (this.score - this.deduction >= this.levelScore) {
