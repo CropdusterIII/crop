@@ -5717,7 +5717,7 @@ var maintainloop = (() => {
         o.define(Class.twin);
         o.name += ran.chooseBotName();
         o.refreshBodyAttributes();
-        o.bots.push(o);
+        bots.push(o);
       }
       // Remove dead ones
       bots = bots.filter(e => {
