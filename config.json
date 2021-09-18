@@ -14,7 +14,7 @@
   "WIDTH": 3000,
   "HEIGHT": 3000,
   "MODE": "tdm",
-  "RANDOM_COLORS": true,
+  "RANDOM_COLORS": false,
   "BANNED_CHARACTER_REGEX": "/[\uFDFD\u200E\u0000]/gi",
   "ROOM_SETUP": [
     ["bas1", "norm", "norm", "bas2"],
@@ -36,7 +36,7 @@
   "TIER_1": 15,
   "TIER_2": 30,
   "TIER_3": 45,
-  "TIER_3": 60,
+  "TIER_4": 60,
   "SKILL_CAP": 60,
   "SKILL_SOFT_CAP": 0,
   "SKILL_CHEAT_CAP": 60,
