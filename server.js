@@ -1225,8 +1225,8 @@ class Skill {
 
   upgrade(stat) {
     if (this.points && this.amount(stat) < this.cap(stat)) {
-      this.change(stat, 5);
-      this.points -= 5;
+      this.change(stat, 1);
+      this.points -= 1;
       return true;
     }
     return false;
@@ -5712,13 +5712,12 @@ var maintainloop = (() => {
       if (bots.length < c.BOTS) {
         let o = new Entity(room.random());
         o.color = 12;
-        o.team = -100;
         o.define(Class.bot);
         o.define(Class.baseProtector);
-        o.define(Class.twin, Class.flank);
+        o.define(Class.twin);
         o.name += ran.chooseBotName();
         o.refreshBodyAttributes();
-        bots.push(o);
+        o.bots.push(o);
       }
       // Remove dead ones
       bots = bots.filter(e => {
