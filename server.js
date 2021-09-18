@@ -1075,7 +1075,7 @@ class Skill {
         return Math.log(4 * x + 1) / Math.log(5);
       }
       let a = [];
-      for (let i = 0; i < c.MAX_SKILL * 2; i++) {
+      for (let i = 0; i < c.MAX_SKILL * 1; i++) {
         a.push(make(i / c.MAX_SKILL));
       }
       // The actual lookup function
