@@ -32,7 +32,7 @@
   "FOOD": [0, 0.75, 0.22, 0.1, 0.005, 0, 0],
   "FOOD_NEST": [0, 0.0, 0.0, 0.75, 0.23, 0.02, 0.0],
   "MAX_SKILL": 10,
-  "SOFT_MAX_SKILL": 1000,
+  "SOFT_MAX_SKILL": 0.59,
   "TIER_1": 15,
   "TIER_2": 30,
   "TIER_3": 45,
@@ -43,8 +43,8 @@
   "SKILL_LEAK": 0,
   "STEALTH": 4,
   "MIN_SPEED": 0.001,
-  "FOOD_AMOUNT": 1.4,
-  "SKILL_BOOST": 1,
+  "FOOD_AMOUNT": 0.4,
+  "SKILL_BOOST": 5,
   "BOTS": 10,
   "GLASS_HEALTH_FACTOR": 2
 }
